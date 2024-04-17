@@ -18,7 +18,8 @@ app.get("/generate_QR",(req,resp)=>{
         console.error('Error generating QR code:', err);
         return;
       }
-     resp.send('QR code URL: '+imageUrl);
+    //  resp.send('QR code URL: '+imageUrl);
+     resp.send('<img src="' + imageUrl + '"></img>');
       // you can then display the QR by adding'<img src="' + imageUrl + '">';
     });
 })
